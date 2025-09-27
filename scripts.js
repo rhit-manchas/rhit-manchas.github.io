@@ -18,3 +18,37 @@
       </p>
     </div>
 */
+
+window.addEventListener("load", (e) => {
+    navigation();
+    footer();
+});
+
+function navigation() {
+    const navigation = document.getElementById("#nav-bar");
+    // main, resume, portfolio (a tags)
+    const mainPage = document.createElement("a");
+    const resumePage = document.createElement("a");
+    const portfolioPage = document.createElement("a");
+
+    mainPage.href = "index.html";
+    mainPage.textContent = "Main";
+
+    navigation.append(mainPage);
+    
+}
+
+function footer() {
+    const footer = document.getElementById("#footer");
+    
+    const linkedinLink = document.createElementById("a");
+    const handshakeLink = document.createElementById("a");
+
+    linkedinLink.href = "";
+    mainLink.textContent = "LinkedIn";
+    handshakeLink.href = "";
+    mainLink.textContent = "Handshake";
+
+    footer.appendChild(linkedinLink);
+    footer.appendChild(handshakeLink);
+});
