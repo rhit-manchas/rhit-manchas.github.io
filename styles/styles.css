@@ -9,7 +9,6 @@ body {
 /* NAV + FOOTER::
 Citation: https://www.w3schools.com/howto/howto_js_topnav.asp */
 nav, footer {
-    position: fixed;
     padding: 10px 10px;
     text-align: center;
     background-color: blue;
@@ -19,10 +18,9 @@ nav, footer {
 
 }
 
-nav a {
-    padding: 20px;
-    color: black;
-
+nav a, footer a{
+    padding: 10px;
+    color: white;
 }
 
 nav a:hover, nav a:visited:hover {
@@ -35,4 +33,61 @@ nav a:hover, nav a:visited:hover {
 nav a:visited {
     color: blue;
 
+}
+
+/* Image Gallery Styles */
+.image-gallery {
+    margin-top: 3rem;
+    padding: 2rem 0;
+    border-top: 2px solid #ddd;
+}
+
+.scroll-ring {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+    padding: 1rem;
+    scrollbar-width: thin;
+}
+
+.image-item {
+    position: relative;
+    min-width: 150px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.image-item:hover {
+    transform: scale(1.1);
+}
+
+.image-item img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+    border: 3px solid #333;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+}
+
+.image-item:hover .image-overlay {
+    opacity: 1;
 }

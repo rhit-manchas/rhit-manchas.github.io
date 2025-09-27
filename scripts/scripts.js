@@ -48,6 +48,28 @@ function navigation() {
     
 }
 
+// Interactive Element: Scrollable Portfolio Array
+function setupImageGallery() {
+    const imageItems = document.querySelectorAll('.image-item');
+    
+    imageItems.forEach(item => {
+        item.addEventListener('click', function() {
+            const project = this.getAttribute('data-project');
+            // Navigate to project detail page
+            window.location.href = `${project}.html`;
+        });
+        
+        // Add hover effects
+        item.addEventListener('mouseenter', function() {
+            this.style.transform = 'scale(1.1)';
+        });
+        
+        item.addEventListener('mouseleave', function() {
+            this.style.transform = 'scale(1)';
+        });
+    });
+  }
+
 function footer() {
     const footer = document.getElementById("#footer");
     
@@ -61,10 +83,8 @@ function footer() {
     mainLink.textContent = "Handshake";
 
     // Citation: https://www.w3schools.com/jsref/met_document_createtextnode.asp
-    footer.append(
-      document.createTextNode("Connect With Me:"),
-      linkedinLink,
-      document.createTextNode("  ||  "),
-      handshakeLink
-    );
+    footer.append(document.createTextNode("Connect With Me:"));
+    footer.append(linkedinLink);
+    footer.append(document.createTextNode("  ||  "));
+    footer.append(handshakeLink);
 }
