@@ -26,6 +26,7 @@ window.addEventListener("load", (e) => {
 
 function navigation() {
     const navigation = document.getElementById("#nav-bar");
+
     // main, resume, portfolio (a tags)
     const mainPage = document.createElement("a");
     const resumePage = document.createElement("a");
@@ -34,7 +35,16 @@ function navigation() {
     mainPage.href = "index.html";
     mainPage.textContent = "Main";
 
+    resumePage.href = "resume.html";
+    resumePage.textContent = "Resume";
+
+    portfolioPage.href = "portfolio.html";
+    portfolioPage.textContent = "Portfolio";
+
+    // Live Coding
     navigation.append(mainPage);
+    navigation.append(resumePage);
+    navigation.append(portfolioPage);
     
 }
 
@@ -46,9 +56,15 @@ function footer() {
 
     linkedinLink.href = "";
     mainLink.textContent = "LinkedIn";
+
     handshakeLink.href = "";
     mainLink.textContent = "Handshake";
 
-    footer.appendChild(linkedinLink);
-    footer.appendChild(handshakeLink);
-});
+    // Citation: https://www.w3schools.com/jsref/met_document_createtextnode.asp
+    footer.append(
+      document.createTextNode("Connect With Me:"),
+      linkedinLink,
+      document.createTextNode("  ||  "),
+      handshakeLink
+    );
+}

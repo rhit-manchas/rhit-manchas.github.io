@@ -5,36 +5,37 @@ body {
 
 }
 
-/* Live Coding 09/26 +
+/* NAV + FOOTER::
 Citation: https://www.w3schools.com/howto/howto_js_topnav.asp */
-nav-bar {
+nav, footer {
+    padding: 20px 0;
+    text-align: center;
     background-color: white;
-    padding: 20px 0; 
+    width: ();
+
 }
 
-nav-bar a {
+nav a {
     padding: 20px 20px;
     text-align: center;
     color: black;
 
 }
 
-nav-bar a:hover {
+nav a:hover, nav a:active:hover {
+    padding: ();
+    height: ();
     background-color: black;
     color: white;
 }
 
-nav-bar a:active {
+nav a:active {
     background-color: black;
     color: white; 
 }
 
-/*Citation: https://www.w3schools.com/howto/howto_css_fixed_footer.asp*/
-.footer {
-    position: fixed;
-
-    background-color: white;
-    color: black;
-    text-align: center;
-
+footer {
+    padding: ();
+    height: ();
+    width: ();
 }
