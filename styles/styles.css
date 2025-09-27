@@ -11,7 +11,8 @@ Citation: https://www.w3schools.com/howto/howto_js_topnav.asp */
 nav, footer {
     padding: 10px 10px;
     text-align: center;
-    background-color: white;
+    background-color: blue;
+    color: white;
     width: 100%;
     margin: 0px;
 
@@ -24,8 +25,8 @@ nav a {
 }
 
 nav a:hover, nav a:visited:hover {
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: blue;
     padding: 40px;
     height: 70%;
 }
