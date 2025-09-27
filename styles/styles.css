@@ -2,40 +2,35 @@ body {
     background-color:white;
     color: black;
     padding: 24px;
+    margin: 0;
 
 }
 
 /* NAV + FOOTER::
 Citation: https://www.w3schools.com/howto/howto_js_topnav.asp */
 nav, footer {
-    padding: 20px 0;
+    padding: 10px 10px;
     text-align: center;
     background-color: white;
-    width: ();
+    width: 100%;
+    margin: 0px;
 
 }
 
 nav a {
-    padding: 20px 20px;
-    text-align: center;
+    padding: 20px;
     color: black;
 
 }
 
-nav a:hover, nav a:active:hover {
-    padding: ();
-    height: ();
+nav a:hover, nav a:visited:hover {
     background-color: black;
     color: white;
+    padding: 40px;
+    height: 70%;
 }
 
-nav a:active {
-    background-color: black;
-    color: white; 
-}
+nav a:visited {
+    color: blue;
 
-footer {
-    padding: ();
-    height: ();
-    width: ();
 }
