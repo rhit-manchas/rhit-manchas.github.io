@@ -26,31 +26,6 @@ border citation:
     height: 370px; 
 }
 
-.project {
-    background-color:#FFEFD3;
-    padding: 0px 0px 0px 50px;
-}
-
-.gallery {
-    padding: 10px;
-    
-}
-
-.gallery-item {
-    background-color: #294C60;
-    padding: 30px 20px 20px 20px;;
-}
-
-.gallery-item:hover {
-    background-color: #001B2E;
-    color: white;
-}
-
-.gallery-specific h3, .gallery-specific p {
-    color: white;
-    padding: 0px 0px 0px 50px;
-}
-
 /* Collapsible Styles */
 .collapsible {
     background-color: #294C60;

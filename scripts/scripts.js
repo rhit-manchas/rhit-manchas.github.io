@@ -53,6 +53,7 @@ function navigation() {
 /* Interactive Element: I implemented a horizontal photo gallery using what we learned about hovering visibility and clickable buttons (from the live labs and last weeks homework). I found a way to make a collapsable as linked bellow for interactivity. 
 
 Citation: https://www.w3schools.com/howto/howto_js_collapsible.asp 
+https://www.geeksforgeeks.org/javascript/how-to-create-a-collapsible-section-using-css-and-javascript/
 */
 
 /* Collapsible Gallery Functionality */
@@ -68,7 +69,6 @@ function interactivePortfolio() {
         if (collapse[j] !== this) {
           collapse[j].classList.remove("active");
           collapse[j].nextElementSibling.style.display = "none";
-
         }
       }
 
@@ -77,11 +77,10 @@ function interactivePortfolio() {
       
       if (content.style.display === "block") {
         content.style.display = "none";
-
       } else {
         content.style.display = "block";
       }
-      
+
     });
   }
 }
