@@ -1,9 +1,82 @@
 body {
-    background-color:white;
-    color: black;
+    background-color: #FFEFD3;
+    color: #001B2E;
     padding: 24px;
-    margin: 0;
+    line-height: 2;
 
+}
+
+/* Main Specific 
+border citation: 
+*/
+.myFace {
+    width: 300px;
+    height: 300px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    
+    background-color: #FFC49B;
+    border: 5px solid #001B2E;
+}
+
+/* Resume Specific */
+.resume-section {
+    padding-bottom: 5px;
+}
+
+.resume-section h2 {
+    padding-bottom: 2px;
+    border-bottom: 5px solid #FFC49B;
+}
+
+.resume-section p {
+    color: #294C60;
+}
+
+/* Portfolio Specific + Interactive */
+.project {
+    background-color:#FFEFD3;
+    padding: 5px;
+    border-bottom: 5px solid #294C60;
+}
+
+.project:hover {
+    background: #FFEFD3;
+    border-bottom: 5px solid #001B2E;
+}
+
+.project a {
+    color: #294C60;
+    font-weight: bold;
+}
+
+.project a:hover {
+    text-decoration: underline;
+}
+
+.gallery {
+    padding: 10px;
+}
+
+.gallery-item {
+    background: #FFC49B;
+    border: 1px solid #ADB6C4;
+    padding: 10px;
+}
+
+.gallery-item:hover {
+    background: #FFC49B;
+    border-color: #294C60;
+}
+
+.gallery-specific h3 {
+    color: #001B2E;
+}
+
+.gallery-specific p {
+    margin: 0;
+    line-height: 1.5;
+    color: #294C60;
 }
 
 /* NAV + FOOTER::
@@ -11,8 +84,8 @@ Citation: https://www.w3schools.com/howto/howto_js_topnav.asp */
 nav, footer {
     padding: 10px 10px;
     text-align: center;
-    background-color: blue;
-    color: white;
+    background-color: #294C60;
+    color: #ADB6C4;
     width: 100%;
     margin: 0px;
 
@@ -20,74 +93,17 @@ nav, footer {
 
 nav a, footer a{
     padding: 10px;
-    color: white;
+    color: #ADB6C4;
 }
 
 nav a:hover, nav a:visited:hover {
-    background-color: white;
-    color: blue;
+    background-color: #ADB6C4;
+    color: #294C60;
     padding: 40px;
     height: 70%;
 }
 
 nav a:visited {
-    color: blue;
+    color: #294C60;
 
-}
-
-/* Image Gallery Styles */
-.image-gallery {
-    margin-top: 3rem;
-    padding: 2rem 0;
-    border-top: 2px solid #ddd;
-}
-
-.scroll-ring {
-    display: flex;
-    overflow-x: auto;
-    gap: 1rem;
-    padding: 1rem;
-    scrollbar-width: thin;
-}
-
-.image-item {
-    position: relative;
-    min-width: 150px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-.image-item:hover {
-    transform: scale(1.1);
-}
-
-.image-item img {
-    width: 150px;
-    height: 150px;
-    border-radius: 10px;
-    object-fit: cover;
-    border: 3px solid #333;
-}
-
-.image-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.8);
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    border-radius: 10px;
-    padding: 1rem;
-    text-align: center;
-}
-
-.image-item:hover .image-overlay {
-    opacity: 1;
 }

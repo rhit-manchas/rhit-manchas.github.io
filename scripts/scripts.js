@@ -22,8 +22,10 @@
 window.addEventListener("load", (e) => {
     navigation();
     footer();
+    interactivePortfolio();
 });
 
+/* Citation: https://www.w3schools.com/jsref/met_document_createtextnode.asp */
 function navigation() {
     const navigation = document.getElementById("#nav-bar");
 
@@ -48,24 +50,28 @@ function navigation() {
     
 }
 
-// Interactive Element: Scrollable Portfolio Array
-function setupImageGallery() {
-    const imageItems = document.querySelectorAll('.image-item');
+/* Interactive Element: I implemented a horizontal photo gallery using what we learned about hovering visibility and clickable buttons (from the live labs and last weeks homework). I programmed it in a way that allows the user to hover or click on images and when they do a dropdown appears that gives them more information on the subject provided in the image. My accessibiliy logic was that if a user couldn't click properly they'd at least be able to hover to get the information. 
+
+Citation: https://www.w3schools.com/jsref/prop_element_classlist.asp
+https://www.w3schools.com/howto/howto_css_dropdown.asp 
+*/
+
+
+function interactivePortfolio() {
+    const galleryItems = document.querySelectorAll('.gallery-item');
     
-    imageItems.forEach(item => {
+    // Live Coding 9-26
+    galleryItems.forEach(item => {
         item.addEventListener('click', function() {
-            const project = this.getAttribute('data-project');
-            // Navigate to project detail page
-            window.location.href = `${project}.html`;
-        });
-        
-        // Add hover effects
-        item.addEventListener('mouseenter', function() {
-            this.style.transform = 'scale(1.1)';
-        });
-        
-        item.addEventListener('mouseleave', function() {
-            this.style.transform = 'scale(1)';
+          
+          galleryItems.forEach(otherItem => {
+            if (otherItem !== item) {
+              otherItem.classList.remove('active');
+            }
+
+          });
+
+          item.classList.toggle('active');
         });
     });
   }
@@ -76,11 +82,11 @@ function footer() {
     const linkedinLink = document.createElementById("a");
     const handshakeLink = document.createElementById("a");
 
-    linkedinLink.href = "";
-    mainLink.textContent = "LinkedIn";
+    linkedinLink.href = "https://www.linkedin.com/in/shriya-manchala/";
+    linkedinLink.textContent = "LinkedIn";
 
-    handshakeLink.href = "";
-    mainLink.textContent = "Handshake";
+    handshakeLink.href = "https://rose-hulman.joinhandshake.com/profiles/udyh44";
+    handshakeLink.textContent = "Handshake";
 
     // Citation: https://www.w3schools.com/jsref/met_document_createtextnode.asp
     footer.append(document.createTextNode("Connect With Me:"));
