@@ -77,20 +77,24 @@ function interactivePortfolio() {
   }
 
 function footer() {
-    const footer = document.getElementById("#footer");
+    const footer = document.querySelector("#footer");
     
-    const linkedinLink = document.createElementById("a");
-    const handshakeLink = document.createElementById("a");
+    const linkedinLink = document.createElementBy("a");
+    const handshakeLink = document.createElementBy("a");
 
     linkedinLink.href = "https://www.linkedin.com/in/shriya-manchala/";
     linkedinLink.textContent = "LinkedIn";
+    linkedinLink.target = "_blank";
 
     handshakeLink.href = "https://rose-hulman.joinhandshake.com/profiles/udyh44";
     handshakeLink.textContent = "Handshake";
+    linkedinLink.target = "_blank";
 
     // Citation: https://www.w3schools.com/jsref/met_document_createtextnode.asp
-    footer.append(document.createTextNode("Connect With Me:"));
-    footer.append(linkedinLink);
-    footer.append(document.createTextNode("  ||  "));
-    footer.append(handshakeLink);
+
+    footer.append(
+      linkedinLink,
+      document.createTextNode(" "),
+      handshakeLink
+    );
 }
