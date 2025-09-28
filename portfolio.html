@@ -24,8 +24,6 @@ Navigation (all pages):
   </head>
   <body>
     <script src="/scripts/scripts.js"></script>
-    <!--Footer-->
-    <footer id="#footer"></footer>
     <!--Nav Bar-->
     <nav id="#nav-bar"></nav>
 
@@ -37,7 +35,7 @@ Navigation (all pages):
         <h2>Neural Imaging Software</h2>
         <h3>Primary Developer</h3>
 
-        <img src="/photos/imaging.png" alt="Neural Imaging Simulation" class="neuron">
+        <img src="/photos/imaging.png" alt="Neural Imaging Simulation" class="photo">
         <p>
           Researched and developed a graphical user interface to simulate human neural networks using both Java-mapping and CAD Modeling.
         </p>
@@ -47,7 +45,7 @@ Navigation (all pages):
       <!--Project #2-->
       <section class="project">
         <h2>Sustainability Dashboard</h2>
-        <img src="/photos/sustainability.png" alt="Sustainability Dashboard" class="environment">
+        <img src="/photos/sustainability.png" alt="Sustainability Dashboard" class="photo">
         
         <p>
           Assisted in developing a web-based dashboard that tracks and visualizes environmental metrics like energy consumption, carbon footprint, and waste management for tech-companies seeking to improve their sustainability index.
@@ -63,69 +61,48 @@ Navigation (all pages):
           Implementated and analyzed a method of Prim's minimum spanning tree algorithm with AI-assisted optimization techniques.Research includes a side-by-side comparison of AI versus traditional approaches to the algorithm.
         </p>
 
-        <a href="/photos/MSTProgramming.pdf">View Research Paper</a>
+        <a href="https://rosehulman-my.sharepoint.com/:w:/g/personal/yeesn_rose-hulman_edu/EautQKYqRxdGiehY8Rly1hkBzkH8Tnop4PiL5hc_yXWP-A?e=LiTOxh">View Research Paper</a>
       </section>
       
-      <!--Interactive Portfolio: Scrollable Ring of Images (Clickable)
-        
-      Citation: https://www.bing.com/search?q=how+to+make+an+interactive+gallery+in+html&cvid=f8877749428c485c9df5d8cb9f3b0657&gs_lcrp=EgRlZGdlKgYIABBFGDkyBggAEEUYOdIBCTE1OTM2ajBqMagCALACAA&FORM=ANNTA1&PC=U531
-        
-      https://www.w3schools.com/howto/howto_css_image_gallery.asp-->
-      <section class="gallery">
+      <!--Interactive Portfolio: Collapsable-->
+      <section class="interactive">
         <h2>Involvement + Supplementary Projects</h2>
         
-        <div class="interactive">
-          <div class="gallery-item">
-            <img src="/photos/battchallenge.png" alt="battchallenge">
-            
-            <div class="gallery-specific">
-              <h3>Battery Workforce Challenge</h3>
+        <button class="collapsible">Battery Workforce Challenge</button>
+        <div class="content">
+          <img src="/photos/battchallenge.png" alt="battchallenge" class="photo">
+          <p>
+            Currently serve as the club Secretary, managing team documentation and communications. I also contributing to the Battery Management System (BMS) team, developing simulink algorithms and testcases for optimizing battery performance.
+          </p>
+        </div>
 
-              <p>
-                Currently serve as the club Secretary, managing team documentation and communications. I also contributing to the Battery Management System (BMS) team, developing simulink algorithms and testcases for optimizing battery performance.
-              </p>
-            </div>
-          </div>
+        <button class="collapsible">Williamson Lab</button>
+        <div class="content">
+          <img src="/photos/williamsonlab.png" alt="labs" class="photo">
+          <p>
+            Conducted research cataloging and data organization for Dr. Williamson's computational biology projects. Analyzed and presented findings to a panel of peers, conveying research results through mindful dicussion.
+          </p>
+        </div>
 
-          <div class="gallery-item">
-            <img src="/photos/williamsonlab.png" alt="labs">
+        <button class="collapsible">Robotics</button>
+        <div class="content">
+          <img src="/photos/vex.png" alt="vexrobotics" class="photo">
+          <p>
+            Led a team in the VEX Robotics Competition teaching VEX Code and CAD Modeling while developing robots to meet competition goals and objectives.
+          </p>
+        </div>
 
-            <div class="gallery-specific">
-              <h3>Williamson Laboratory Meetings</h3>
-
-              <p>
-                Conducted research cataloging and data organization for Dr. Williamson's computational biology projects. Analyzed and presented findings to a panel of peers, conveying research results through mindful dicussion.
-              </p>
-            </div>
-          </div>
-
-          <div class="gallery-item">
-            <img src="/photos/vex.png" alt="vexrobotics">
-
-            <div class="gallery-specific">
-              <h3>Robotics</h3>
-              
-              <p>
-                Led a team in the VEX Robotics Competition teaching VEX Code and CAD Modeling while developing robots to meet competition goals and objectives.
-              </p>
-            </div>
-          </div>
-
-          <div class="gallery-item">
-            <img src="/photos/sankara.png" alt="giftofvision">
-
-            <div class="gallery-specific">
-              <h3>Sankara Eye Foundation</h3>
-
-              <p>
-                Volunteered with a non-profit organization dedicated to providing free eye care services. Assisted in community outreach programs and helped organize fundraising events to support vision restoration surgeries.
-              </p>
-            </div>
-          </div>
-
+        <button class="collapsible">Sankara Eye Foundation</button>
+        <div class="content">
+          <img src="/photos/sankara.png" alt="giftofvision" class="photo">
+          <p>
+            Volunteered with a non-profit organization dedicated to providing free eye care services. Assisted in community outreach programs and helped organize fundraising events to support vision restoration surgeries.
+          </p>
         </div>
       </section>
-
     </main>
+
+    <!--Footer-->
+    <footer id="#footer"></footer>
   </body>
 </html>

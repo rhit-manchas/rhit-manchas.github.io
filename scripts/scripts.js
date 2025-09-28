@@ -50,37 +50,48 @@ function navigation() {
     
 }
 
-/* Interactive Element: I implemented a horizontal photo gallery using what we learned about hovering visibility and clickable buttons (from the live labs and last weeks homework). I programmed it in a way that allows the user to hover or click on images and when they do a dropdown appears that gives them more information on the subject provided in the image. My accessibiliy logic was that if a user couldn't click properly they'd at least be able to hover to get the information. 
+/* Interactive Element: I implemented a horizontal photo gallery using what we learned about hovering visibility and clickable buttons (from the live labs and last weeks homework). I found a way to make a collapsable as linked bellow for interactivity. 
 
-Citation: https://www.w3schools.com/jsref/prop_element_classlist.asp
-https://www.w3schools.com/howto/howto_css_dropdown.asp 
+Citation: https://www.w3schools.com/howto/howto_js_collapsible.asp 
 */
 
-
+/* Collapsible Gallery Functionality */
 function interactivePortfolio() {
-    const galleryItems = document.querySelectorAll('.gallery-item');
-    
-    // Live Coding 9-26
-    galleryItems.forEach(item => {
-        item.addEventListener('click', function() {
-          
-          galleryItems.forEach(otherItem => {
-            if (otherItem !== item) {
-              otherItem.classList.remove('active');
-            }
+  var collapse = document.getElementsByClassName("collapsible");
 
-          });
+  var i;
+  for (i = 0; i < collapse.length; i++) {
+    collapse[i].addEventListener("click", function() {
+      
+      // added in a section to close the collapsable
+      for (var j = 0; j < collapse.length; j++) {
+        if (collapse[j] !== this) {
+          collapse[j].classList.remove("active");
+          collapse[j].nextElementSibling.style.display = "none";
 
-          item.classList.toggle('active');
-        });
+        }
+      }
+
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      
+      if (content.style.display === "block") {
+        content.style.display = "none";
+
+      } else {
+        content.style.display = "block";
+      }
+      
     });
   }
+}
+
 
 function footer() {
     const footer = document.getElementById("#footer");
     
-    const linkedinLink = document.createElementBy("a");
-    const handshakeLink = document.createElementBy("a");
+    const linkedinLink = document.createElement("a");
+    const handshakeLink = document.createElement("a");
 
     linkedinLink.href = "https://www.linkedin.com/in/shriya-manchala/";
     linkedinLink.textContent = "LinkedIn";

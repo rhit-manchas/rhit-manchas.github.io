@@ -4,6 +4,8 @@ body {
     padding: 24px;
     line-height: 2;
 
+    font-size: 17px;
+    font-family: cursive; /*taken from the list of auto fonts b/c the default was ugly*/
 }
 
 /* Main Specific 
@@ -11,99 +13,93 @@ border citation:
 */
 .myFace {
     width: 500px;
-    height: 300px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    height: 370px;
+    padding: 20px 20px 20px 20px;
     
     background-color: #FFC49B;
-    border: 5px solid #001B2E;
-}
-
-/* Resume Specific */
-.resume-section {
-    padding-bottom: 5px;
-}
-
-.resume-section h2 {
-    padding-bottom: 2px;
-    border-bottom: 5px solid #FFC49B;
-}
-
-.resume-section p {
-    color: #294C60;
 }
 
 /* Portfolio Specific + Interactive */
+.photo {
+    padding: 0px 20px 20px 20px;
+    width: 500px;
+    height: 370px; 
+}
+
 .project {
     background-color:#FFEFD3;
-    padding: 5px;
-    border-bottom: 5px solid #294C60;
-}
-
-.project:hover {
-    background: #FFEFD3;
-    border-bottom: 5px solid #001B2E;
-}
-
-.project a {
-    color: #294C60;
-    font-weight: bold;
-}
-
-.project a:hover {
-    text-decoration: underline;
+    padding: 0px 0px 0px 50px;
 }
 
 .gallery {
     padding: 10px;
+    
 }
 
 .gallery-item {
-    background: #FFC49B;
-    border: 1px solid #ADB6C4;
-    padding: 10px;
+    background-color: #294C60;
+    padding: 30px 20px 20px 20px;;
 }
 
 .gallery-item:hover {
-    background: #FFC49B;
-    border-color: #294C60;
+    background-color: #001B2E;
+    color: white;
 }
 
-.gallery-specific h3 {
-    color: #001B2E;
+.gallery-specific h3, .gallery-specific p {
+    color: white;
+    padding: 0px 0px 0px 50px;
 }
 
-.gallery-specific p {
-    margin: 0;
-    line-height: 1.5;
-    color: #294C60;
+/* Collapsible Styles */
+.collapsible {
+    background-color: #294C60;
+    color: white;
+    padding: 20px 20px 20px 20px;
+    width: 100%;
+    text-align: left;
+    font-size: 20px;
+}
+
+.active, .collapsible:hover {
+    background-color: #001B2E;
+}
+
+.content {
+    padding: 0px 18px;
+    background-color: white;
 }
 
 /* NAV + FOOTER::
 Citation: https://www.w3schools.com/howto/howto_js_topnav.asp */
 nav, footer {
-    padding: 10px 10px;
-    text-align: center;
     background-color: #294C60;
-    color: #ADB6C4;
+    color: White;
     width: 100%;
     margin: 0px;
+    padding: 10px 10px;
+    text-align: center;
 
 }
 
 nav a, footer a{
     padding: 10px;
-    color: #ADB6C4;
+    color: White;
+    font-size: 20px;
 }
 
-nav a:hover, nav a:visited:hover {
+nav a:hover, footer a:hover {
     background-color: #ADB6C4;
     color: #294C60;
     padding: 40px;
     height: 70%;
+    font-size: 30px
 }
 
-nav a:visited {
-    color: #294C60;
+footer a:visited {
+    color: #ADB6C4;
+}
 
+nav a:visited:hover, footer a:visited:hover {
+    color: #294C60;
 }
